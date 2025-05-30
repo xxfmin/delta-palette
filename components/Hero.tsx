@@ -24,15 +24,15 @@ const Hero = () => {
   return (
     <section className="w-full min-h-full">
       <HeroBackground>
-        <div className="w-full sm:w-3xl h-auto flex flex-col items-center text-center z-10 bg-white rounded-md p-5">
+        <div className="w-full sm:w-3xl h-auto flex flex-col items-center text-center z-10 rounded-md p-5">
           <h1 className="font-semibold text-3xl sm:text-5xl pb-2">
             Delta Palette
           </h1>
           <p className="text-lg text-gray-600 sm:text-lg">
             Build a palette of mathematically distinct colors for normal vision
-            and deuteranopia
+            and color vision deficiency
           </p>
-          <div className="flex flex-row items-center">
+          <div className="flex flex-row items-center gap-x-5">
             {/* Number of colors selector */}
             <Select
               value={n.toString()}
@@ -42,7 +42,7 @@ const Hero = () => {
                 <SelectValue placeholder={`# of Colors: ${n}`} />
               </SelectTrigger>
               <SelectContent>
-                {Array.from({ length: 11 }, (_, i) => i + 4).map((count) => (
+                {Array.from({ length: 12 }, (_, i) => i + 4).map((count) => (
                   <SelectItem key={count} value={count.toString()}>
                     {count}
                   </SelectItem>
