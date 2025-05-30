@@ -7,23 +7,21 @@ export default function About() {
       <div>
         <GradientBackground />
       </div>
-      <div className="w-full sm:w-3xl p-5">
+      <div className="w-full sm:w-3xl p-5 my-6">
         <h1 className="text-3xl sm:text-5xl font-bold pb-6 border-b">
-          Understand the Science
+          Understand The Science
         </h1>
 
         {/* IDEA */}
         <div className="mt-6 border-b">
-          <h2 className="text-lg sm:text-2xl font-semibold">
-            Idea behind this:
-          </h2>
+          <h2 className="text-lg sm:text-2xl font-semibold">The Idea:</h2>
           <p className="my-4">
             My mom has <span className="underline">deuteranopia</span>{" "}
             (red-green color blindness), and on our trips she'd always squint at
             transit maps, unable to tell the lines apart. That is because she
             has difficulty distinguishing between red and green colors.
           </p>
-          <div className="flex flex-row w-full gap-x-4">
+          <div className="flex flex-row w-full gap-x-3">
             <div>
               <Image
                 src="/img/about/map-normal.png"
@@ -32,7 +30,7 @@ export default function About() {
                 height={400}
                 quality={90}
                 style={{ width: "auto", height: "100%" }}
-                className="rounded-lg shadow-lg object-cover"
+                className="rounded-lg shadow-lg object-cover mb-2"
               />
               <p className="text-center">How I see it</p>
             </div>
@@ -44,7 +42,7 @@ export default function About() {
                 height={400}
                 quality={90}
                 style={{ width: "auto", height: "100%" }}
-                className="rounded-lg shadow-lg object-cover"
+                className="rounded-lg shadow-lg object-cover mb-2"
               />
               <p className="text-center">How she sees it</p>
             </div>
@@ -58,13 +56,139 @@ export default function About() {
 
         {/* SCIENCE */}
         <div className="mt-6 border-b">
-          <h2 className="text-lg sm:text-2xl font-semibold">The Science:</h2>
-          <p className="my-4">
-            My mom has <span className="underline">deuteranopia</span>{" "}
-            (red-green color blindness), and on our trips she'd always squint at
-            transit maps, unable to tell the lines apart. That is because she
-            has difficulty distinguishing between red and green colors.
-          </p>
+          <h2 className="text-lg sm:text-2xl font-semibold mb-4">
+            The Science:
+          </h2>
+          <div className="flex flex-col gap-y-3">
+            <p>
+              When I set out to built this generator, I knew I had to figure out
+              3 things:
+            </p>
+            <ol className="list-decimal list-inside ml-4 gap-y-1">
+              <li>A color space where numbers match perception.</li>
+              <li>A simulation of color vision deficiency (CVD).</li>
+              <li>An optimization that keeps colours “far apart”.</li>
+            </ol>
+            <h3 className="font-semibold">1. Why Oklab?</h3>
+            <p className="ml-4">
+              Oklab is a perceptual color space designed so that equal numerical
+              moves correspond to equal perceived shifts in hue, chroma, or
+              lightness. In sRGB, two colors with the same coordinate difference
+              can look wildly different to our eyes, but in Oklab, Euclidean
+              distance lines up with how we actually see. That makes it perfect
+              for measuring and maximizing “visual distance” between any two
+              palette entries.
+            </p>
+            <h3 className="font-semibold">
+              2. Simulating Color Vision Deficiency (CVD)
+            </h3>
+            <p className="ml-4">
+              To recreate deuteranopia, and other forms of color-blindness, I
+              paired <span className="italic">Culori</span> ’s color-space
+              conversions with the <code>color-blind</code> library. This combo
+              gives an exact preview of how each swatch appears to viewers with
+              CVD.
+            </p>
+            <h3 className="font-semibold">3. Maximin Optimization</h3>
+            <p className="ml-4 pb-10">
+              Rather than simply spreading colors evenly, I posed a “maximin”
+              problem: pick n points in Oklab such that the smallest pairwise
+              distance, checked under both true-color and simulated-color views,
+              is as large as possible. That worst-case guarantee ensures no two
+              lines on your map ever look confusingly similar, no matter who’s
+              looking.
+            </p>
+          </div>
+        </div>
+
+        {/* Credits */}
+        <div className="mt-6">
+          <h2 className="text-lg sm:text-2xl font-semibold mb-4">Credits:</h2>
+          <div className="flex flex-col gap-3">
+            <p>
+              Built and maintained by <strong>Felipe Min</strong>.
+            </p>
+            <p>Useful Resources:</p>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>
+                <a
+                  href="https://bottosson.github.io/posts/oklab/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline text-blue-400"
+                >
+                  Oklab
+                </a>{" "}
+                perceptual color space
+              </li>
+              <li>
+                <a
+                  href="https://culorijs.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline text-blue-400"
+                >
+                  Culori
+                </a>{" "}
+                for color conversions
+              </li>
+              <li>
+                <a
+                  href="https://github.com/skratchdot/color-blind"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline text-blue-400"
+                >
+                  color-blind
+                </a>{" "}
+                simulation algorithms based on established research
+              </li>
+              <li>
+                <a
+                  href="https://www.mathworks.com/matlabcentral/fileexchange/70215-maximally-distinct-color-generator"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline text-blue-400"
+                >
+                  MAXDISTCOLOR
+                </a>{" "}
+                greedy algorithm that generates distinctly separated colors
+              </li>
+            </ul>
+            <div className="flex flex-row justify-center gap-x-8 mt-4 pb-10">
+              <a
+                href="https://github.com/your-username"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+              >
+                <Image
+                  src="/img/about/github.png"
+                  alt="GitHub Logo"
+                  width={24}
+                  height={24}
+                />
+                <span className="text-base font-medium">Source Code</span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/your-profile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+              >
+                <Image
+                  src="/img/about/linkedin.png"
+                  alt="LinkedIn Logo"
+                  width={24}
+                  height={24}
+                />
+                <span className="text-base font-medium">
+                  Connect on LinkedIn
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </main>
