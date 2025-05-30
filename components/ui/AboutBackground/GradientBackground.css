@@ -49,7 +49,7 @@
 
 .gradient-bg {
   width: 100vw;
-  height: 100vh;
+  height: 200px;
   position: fixed;
   overflow: hidden;
   top: 0;
