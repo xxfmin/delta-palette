@@ -67,7 +67,7 @@ export default function About() {
             <ol className="list-decimal list-inside ml-4 gap-y-1">
               <li>A color space where numbers match perception.</li>
               <li>A simulation of color vision deficiency (CVD).</li>
-              <li>An optimization that keeps colours “far apart”.</li>
+              <li>An optimization that keeps colors “far apart”.</li>
             </ol>
             <h3 className="font-semibold">1. Why Oklab?</h3>
             <p className="ml-4">
