@@ -22,9 +22,11 @@ const Hero = () => {
   };
 
   return (
-    <section className="w-full min-h-full">
-      <HeroBackground>
-        <div className="w-full sm:w-3xl h-auto flex flex-col items-center text-center z-10 rounded-md p-5">
+    <section className="relative h-screen w-full overflow-hidden">
+      <HeroBackground children={undefined} />
+
+      <div className="absolute inset-0 flex flex-col justify-center items-center px-5">
+        <div className="w-full sm:w-3xl flex flex-col items-center text-center z-10 rounded-md p-5">
           <h1 className="font-semibold text-3xl sm:text-5xl pb-2">
             Delta Palette
           </h1>
@@ -32,8 +34,8 @@ const Hero = () => {
             Build a palette of mathematically distinct colors for normal vision
             and color vision deficiency
           </p>
-          <div className="flex flex-row items-center gap-x-5">
-            {/* Number of colors selector */}
+
+          <div className="flex flex-row items-center gap-x-5 mt-4">
             <Select
               value={n.toString()}
               onValueChange={(val) => setN(parseInt(val, 10))}
@@ -50,7 +52,6 @@ const Hero = () => {
               </SelectContent>
             </Select>
 
-            {/* Mode selector */}
             <Select value={mode} onValueChange={(val) => setMode(val as Mode)}>
               <SelectTrigger className="w-[160px]">
                 <SelectValue placeholder={mode} />
@@ -62,9 +63,11 @@ const Hero = () => {
               </SelectContent>
             </Select>
           </div>
-          <button className="cursor-pointer" onClick={handleGenerate}>
+
+          <button className="mt-6 cursor-pointer" onClick={handleGenerate}>
             Generate Palette
           </button>
+
           {palette.length > 0 && (
             <div className="flex space-x-2 mt-6">
               {palette.map((hex) => (
@@ -77,7 +80,7 @@ const Hero = () => {
             </div>
           )}
         </div>
-      </HeroBackground>
+      </div>
     </section>
   );
 };
