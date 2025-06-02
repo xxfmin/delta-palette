@@ -1,4 +1,5 @@
 declare module "color-blind" {
-  /* simulate deuteranopia (green-cone deficiency) on a hex color */
   export function deuteranopia(hex: string): string;
+  export function protanopia(hex: string): string;
+  export function tritanopia(hex: string): string;
 }
