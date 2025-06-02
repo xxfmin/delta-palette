@@ -14,8 +14,8 @@ export default function About() {
         <div className="mt-6 border-b">
           <h2 className="text-lg sm:text-2xl font-semibold">The Idea:</h2>
           <p className="my-4">
-            My mom has <span className="underline">deuteranopia</span>{" "}
-            (red-green color blindness), and on our trips she'd always squint at
+            My mom has <span className="underline">deuteranopia</span> (form of
+            red-green color blindness), and on our trips she'd always squint at
             transit maps, unable to tell the lines apart. That is because she
             has difficulty distinguishing between red and green colors.
           </p>
