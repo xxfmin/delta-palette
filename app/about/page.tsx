@@ -1,12 +1,10 @@
 import Image from "next/image";
-import GradientBackground from "@/components/ui/AboutBackground/GradientBackground";
+import Navbar from "@/components/Navbar";
 
 export default function About() {
   return (
     <main className="relative w-full h-screen flex flex-col items-center text-black">
-      <div>
-        <GradientBackground />
-      </div>
+      <Navbar />
       <div className="w-full sm:w-3xl p-5 my-6">
         <h1 className="text-3xl sm:text-5xl font-bold pb-6 border-b">
           Understand The Science
@@ -157,7 +155,7 @@ export default function About() {
             </ul>
             <div className="flex flex-row justify-center gap-x-8 mt-4 pb-10">
               <a
-                href="https://github.com/your-username"
+                href="https://github.com/xxfmin/delta-palette"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:opacity-80 transition-opacity"
@@ -172,7 +170,7 @@ export default function About() {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/your-profile"
+                href="https://www.linkedin.com/in/felipe-min/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:opacity-80 transition-opacity"
