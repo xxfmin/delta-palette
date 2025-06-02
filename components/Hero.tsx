@@ -59,12 +59,17 @@ const Hero = () => {
               <SelectContent>
                 <SelectItem value="normal">Normal vision</SelectItem>
                 <SelectItem value="deuteranopia">Deuteranopia</SelectItem>
+                <SelectItem value="protanopia">Protanopia</SelectItem>
+                <SelectItem value="tritanopia">Tritanopia</SelectItem>
                 <SelectItem value="both">Both</SelectItem>
               </SelectContent>
             </Select>
           </div>
 
-          <button className="mt-6 cursor-pointer" onClick={handleGenerate}>
+          <button
+            className="mt-6 border px-3 py-2 rounded-sm cursor-pointer"
+            onClick={handleGenerate}
+          >
             Generate Palette
           </button>
 
