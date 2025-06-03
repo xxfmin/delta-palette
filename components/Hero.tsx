@@ -32,10 +32,16 @@ const Hero = () => {
             Colors mathematically spaced&nbsp;to&nbsp;stay&nbsp;distinct—for
             everyone.
           </p>
+          <a
+            href="/about"
+            className="mt-3 inline-block text-sm font-medium text-blue-600 hover:text-blue-800 underline"
+          >
+            Understand the science
+          </a>
         </div>
 
         {palette.length > 0 && (
-          <div className="z-10 mt-10 flex w-full px-2">
+          <div className="z-10 mt-7 flex w-full px-2">
             <div className="flex w-full gap-2">
               {palette.map((hex) => (
                 <div key={hex} className="flex flex-col items-center flex-1">
