@@ -24,10 +24,11 @@ const Hero = () => {
   return (
     <section className="relative h-screen w-full overflow-hidden">
       <HeroBackground children={undefined} />
-
       <div className="absolute inset-0 flex flex-col items-center px-5 pt-20">
         <div className="z-10 flex w-full max-w-4xl flex-col items-center text-center">
-          <h1 className="text-4xl font-extrabold sm:text-6xl">Delta Palette</h1>
+          <h1 className="text-4xl font-extrabold sm:text-6xl pt-6">
+            Delta Palette
+          </h1>
           <p className="mt-2 text-lg text-gray-700 sm:text-xl">
             Colors mathematically spaced&nbsp;to&nbsp;stay&nbsp;distinct—for
             everyone.
