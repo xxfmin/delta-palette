@@ -3,8 +3,8 @@ import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <main className="flex flex-col h-screen">
-      <Navbar />
+    <main className="flex h-screen">
+      <Navbar transparent={true} />
       <Hero />
     </main>
   );
