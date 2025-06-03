@@ -21,12 +21,11 @@ export type Mode =
   | "tritanopia"
   | "both";
 
-
 /*                        CONVERTERS AND FORMATTERS                        */
 
 // Culori converters
 const toOklab = converter("oklab"); // sRGB -> Oklab
-const toRgb = converter("rgb");     // Oklab -> sRGB
+const toRgb = converter("rgb"); // Oklab -> sRGB
 
 // helper to wrap {r,g,b} into a Culori compatible Rgb object
 const asRgb = (c: Color): Rgb => ({
@@ -139,10 +138,10 @@ export function distance(c1: Color, c2: Color, mode: Mode): number {
  *   raised this to 0.20 so that “yellow vs. teal” or any similarly close pair
  *   under tritanopia (or other CVDs) will be rejected.
  */
-const MIN_DELTA_E = 0.20;
+const MIN_DELTA_E = 0.2;
 
 /**
- *   1. sample 10,000 random candidate colors in sRGB.
+ *   1. sample 7500 random candidate colors in sRGB.
  *   2. filter out any candidate whose simulated Lightness (L) is too close to 0 or 1
  *      (we now use L < 0.20 or L > 0.90) under the chosen CVD. This rejects near-black and
  *      near-white, so we don’t end up with black/white defaults.
@@ -160,11 +159,11 @@ export function generatePalette(n: number, mode: Mode): string[] {
   // 1) clamp n to [1, 25]
   const target = Math.max(1, Math.min(n, 25));
 
-  // 2) build a large pool of 10,000 random candidates (sRGB),
+  // 2) build a large pool of 7500 random candidates (sRGB),
   //    then filter out any candidate whose simulated Lightness (L)
   //    is too close to 0.20 (black) or 0.90 (white).
   const rawCandidates: Color[] = [];
-  while (rawCandidates.length < 10000) {
+  while (rawCandidates.length < 7500) {
     const candidate: Color = {
       r: Math.random(),
       g: Math.random(),
@@ -177,10 +176,10 @@ export function generatePalette(n: number, mode: Mode): string[] {
     // convert the simulated version to Oklab
     const labSim = toOklab(asRgb(simulated))!; // [L_sim, a_sim, b_sim]
 
-    // reject any simulated‐L below 0.20 OR above 0.90 
+    // reject any simulated‐L below 0.20 OR above 0.90
     // this ensures we never keep a color that becomes too dark (near-black) once simulated,
     // and also excludes near-white (L > 0.90).
-    if (labSim.l > 0.20 && labSim.l < 0.90) {
+    if (labSim.l > 0.2 && labSim.l < 0.9) {
       rawCandidates.push(candidate);
     }
   }
