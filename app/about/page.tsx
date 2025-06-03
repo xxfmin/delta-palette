@@ -4,8 +4,8 @@ import Navbar from "@/components/Navbar";
 export default function About() {
   return (
     <main className="relative w-full h-screen flex flex-col items-center text-black">
-      <Navbar />
-      <div className="w-full sm:w-3xl p-5 my-6">
+      <Navbar transparent={false} />
+      <div className="w-full sm:w-3xl p-5 my-6 pt-25">
         <h1 className="text-3xl sm:text-5xl font-bold pb-6 border-b">
           Understand The Science
         </h1>
