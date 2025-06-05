@@ -23,7 +23,7 @@ export default function About() {
             <div>
               <Image
                 src="/img/about/map-normal.png"
-                alt="Felipe Min headshot"
+                alt="map no cvd"
                 width={400}
                 height={400}
                 quality={90}
@@ -35,7 +35,7 @@ export default function About() {
             <div>
               <Image
                 src="/img/about/map-cvd.jpg"
-                alt="Felipe Min headshot"
+                alt="map with cvd"
                 width={400}
                 height={400}
                 quality={90}
@@ -97,6 +97,51 @@ export default function About() {
               looking.
             </p>
           </div>
+        </div>
+
+        {/* RESULTS */}
+        <div className="mt-6 border-b">
+          <h2 className="text-lg sm:text-2xl font-semibold">Results:</h2>
+          <p className="my-4">
+            The objective was to test whether a Delta Palette-generated color
+            set improves route separability for users with deuteranopia compared
+            with the standard NYC subway colors.
+          </p>
+          <h3 className="my-4">
+            Here's how the map looks after applying a 12-color palette generated
+            by my code:
+          </h3>
+          <div className="flex flex-row w-full gap-x-3">
+            <div>
+              <Image
+                src="/img/about/map-normal2.jpg"
+                alt="map no cvd"
+                width={400}
+                height={400}
+                quality={90}
+                style={{ width: "auto", height: "100%" }}
+                className="rounded-lg shadow-lg object-cover mb-2"
+              />
+              <p className="text-center">Normal Vision</p>
+            </div>
+            <div>
+              <Image
+                src="/img/about/map-cvd2.jpg"
+                alt="map with cvd"
+                width={400}
+                height={400}
+                quality={90}
+                style={{ width: "auto", height: "100%" }}
+                className="rounded-lg shadow-lg object-cover mb-2"
+              />
+              <p className="text-center">Deuteranopia</p>
+            </div>
+          </div>
+          <p className="py-10 mt-5">
+            In the simulated view, red/green trunk lines previously merged into
+            a single olive tone; the new palette separates them into distinct
+            steel-blue and dusty-green.
+          </p>
         </div>
 
         {/* Credits */}
