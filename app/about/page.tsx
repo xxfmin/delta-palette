@@ -12,7 +12,7 @@ export default function About() {
 
         {/* IDEA */}
         <div className="mt-6 border-b">
-          <h2 className="text-lg sm:text-2xl font-semibold">The Idea:</h2>
+          <h2 className="text-lg sm:text-2xl font-semibold">The Idea</h2>
           <p className="my-4">
             My mom has <span className="underline">deuteranopia</span> (form of
             red-green color blindness), and on our trips she'd always squint at
@@ -55,7 +55,7 @@ export default function About() {
         {/* SCIENCE */}
         <div className="mt-6 border-b">
           <h2 className="text-lg sm:text-2xl font-semibold mb-4">
-            The Science:
+            The Science
           </h2>
           <div className="flex flex-col gap-y-3">
             <p>
@@ -101,7 +101,7 @@ export default function About() {
 
         {/* RESULTS */}
         <div className="mt-6 border-b">
-          <h2 className="text-lg sm:text-2xl font-semibold">Results:</h2>
+          <h2 className="text-lg sm:text-2xl font-semibold">Results</h2>
           <p className="my-4">
             The objective was to test whether a Delta Palette-generated color
             set improves route separability for users with deuteranopia compared
@@ -158,9 +158,51 @@ export default function About() {
           </div>
         </div>
 
-        {/* Credits */}
+        {/* FINAL THOUGHTS */}
+        <div className="mt-6 border-b">
+          <h2 className="text-lg sm:text-2xl font-semibold">Final Thoughts</h2>
+
+          <p className="my-4">
+            Although improving transit‐map legibility for users with
+            deuteranopia was my primary motivation, the underlying Delta Palette
+            generator can be applied to many other contexts where color
+            separability matters. By ensuring each hue is maximally distinct in
+            both normal vision and CVD simulations, you can make any
+            visualization or interface more accessible.
+          </p>
+
+          <h3 className="font-semibold mt-4">Other Potential Applications:</h3>
+          <ul className="list-disc list-inside ml-4 my-4 space-y-2">
+            <li>
+              <span className="font-semibold">Educational Materials: </span>
+              Diagrams, instructional posters, or textbooks often use colored
+              regions to convey meaning; optimizing those colors can help
+              students with partial color blindness follow along without
+              confusion.
+            </li>
+            <li>
+              <span className="font-semibold">
+                UI Theming & Design Systems:{" "}
+              </span>
+              Any design system that relies on color coding (buttons, alerts,
+              badges) can benefit from a CVD‐friendly palette so that
+              interactive elements remain clear for all users.
+            </li>
+
+            <li className="mb-10">
+              <span className="font-semibold">
+                Building Floorplans & Evacuation Routes:{" "}
+              </span>
+              Emergency signage or interactive floorplans that rely on multiple
+              colors (e.g., exit paths, hazard zones) can use something like
+              this to guarantee legibility for safety instructions.
+            </li>
+          </ul>
+        </div>
+
+        {/* CREDITS */}
         <div className="mt-6">
-          <h2 className="text-lg sm:text-2xl font-semibold mb-4">Credits:</h2>
+          <h2 className="text-lg sm:text-2xl font-semibold mb-4">Credits</h2>
           <div className="flex flex-col gap-3">
             <p>
               Built and maintained by <strong>Felipe Min</strong>.
