@@ -137,11 +137,25 @@ export default function About() {
               <p className="text-center">Deuteranopia</p>
             </div>
           </div>
-          <p className="py-10 mt-5">
+          <p className="pt-10 mt-5">
             In the simulated view, red/green trunk lines previously merged into
             a single olive tone; the new palette separates them into distinct
             steel-blue and dusty-green.
           </p>
+          <h3 className="pb-3 mt-5 font-semibold text-lg">
+            Experiment with my friend with red-green partial color blindness:
+          </h3>
+          <div className="w-full sm:w-3xl mx-auto mb-10">
+            <div className="aspect-video w-full rounded-xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.youtube.com/embed/cG8QBCUJcv0"
+                title="Testing Delta Palette with Sunny :)"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+          </div>
         </div>
 
         {/* Credits */}
