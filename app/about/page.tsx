@@ -19,32 +19,33 @@ export default function About() {
             transit maps, unable to tell the lines apart. That is because she
             has difficulty distinguishing between red and green colors.
           </p>
+
           <div className="flex flex-row w-full gap-x-3">
-            <div>
+            <div className="w-1/2">
               <Image
                 src="/img/about/map-normal.png"
                 alt="map no cvd"
-                width={400}
-                height={400}
+                width={800}
+                height={600}
                 quality={90}
-                style={{ width: "auto", height: "100%" }}
-                className="rounded-lg shadow-lg object-cover mb-2"
+                className="rounded-lg shadow-lg w-full h-auto mb-2"
               />
               <p className="text-center">How I see it</p>
             </div>
-            <div>
+
+            <div className="w-1/2">
               <Image
                 src="/img/about/map-cvd.jpg"
                 alt="map with cvd"
-                width={400}
-                height={400}
+                width={800}
+                height={600}
                 quality={90}
-                style={{ width: "auto", height: "100%" }}
-                className="rounded-lg shadow-lg object-cover mb-2"
+                className="rounded-lg shadow-lg w-full h-auto mb-2"
               />
               <p className="text-center">How she sees it</p>
             </div>
           </div>
+
           <p className="py-10">
             <span className="font-bold">Then I realized:</span> if I could
             generate palettes optimized for both normal vision and deuteranopia,
