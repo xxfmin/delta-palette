@@ -144,7 +144,7 @@ export default function About() {
             steel-blue and dusty-green.
           </p>
           <h3 className="pb-3 mt-5 font-semibold text-lg">
-            Experiment with my friend with red-green partial color blindness:
+            Experiment with my friend with partial red-green color blindness:
           </h3>
           <div className="w-full sm:w-3xl mx-auto mb-10">
             <div className="aspect-video w-full rounded-xl overflow-hidden shadow-lg">
