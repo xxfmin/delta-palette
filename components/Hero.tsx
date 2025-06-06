@@ -86,7 +86,6 @@ const Hero = () => {
             <SelectItem value="deuteranopia">Deuteranopia</SelectItem>
             <SelectItem value="protanopia">Protanopia</SelectItem>
             <SelectItem value="tritanopia">Tritanopia</SelectItem>
-            <SelectItem value="both">Both</SelectItem>
           </SelectContent>
         </Select>
 
