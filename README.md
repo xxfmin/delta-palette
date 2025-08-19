@@ -1,7 +1,7 @@
 # Delta Palette
 
 A color palette generator that creates mathematically optimized color sets that remain distinct for everyone, including people with color vision deficiencies.
-- [Live Demo](https://delta-palette.vercel.app)
+[Live Demo](https://delta-palette.vercel.app)
 
 ## Overview
 
